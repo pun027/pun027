@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Google siteเก็บโครงงาน</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #d9e7d8, #b5c5b7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* ป้องกันการเลื่อน */
+            position: relative;
+            touch-action: none; /* ปิด gesture เลื่อน */
+        }
+
+        /* ลวดลายพื้นหลังแบบวงกลม */
+        .background-decor {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .background-decor2 {
+            position: absolute;
+            bottom: 15%;
+            right: 15%;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 900px;
+            z-index: 1;
+        }
+
+        .logo-section {
+            background: #d9e7d8;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .form-section {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fdfdfd;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 200px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1rem;
+            background: #6c757d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #5a6268;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .social-btn.google {
+            background: #db4437;
+            color: #fff;
+        }
+
+        .social-btn.facebook {
+            background: #4267B2;
+            color: #fff;
+        }
+    </style>
+    <script>
+        // ป้องกันการเลื่อนด้วย JavaScript
+        document.addEventListener("wheel", function(event) {
+            event.preventDefault();
+        }, { passive: false });
+
+        document.addEventListener("touchmove", function(event) {
+            event.preventDefault();
+        }, { passive: false });
+    </script>
+</head>
+<body>
+    <!-- ลวดลายพื้นหลัง -->
+    <div class="background-decor"></div>
+    <div class="background-decor2"></div>
+
+    <div class="container">
+        <!-- Section โลโก้ -->
+        <div class="logo-section">
+            <img src="logo.png" alt="โลโก้แผนก" class="logo">
+            <h1>Google site โครงงานของแผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคสิงห์บุรี</h1>
+        </div>
+
+        <!-- Section ฟอร์ม -->
+        <div class="form-section">
+            <a href="login.html" class="btn">เข้าสู่ระบบ</a>
+            <a href="register.html" class="btn">ลงทะเบียน</a>
+        </div>
+    </div>
+</body>
+</html>
