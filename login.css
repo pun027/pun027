@@ -1,122 +1,50 @@
+อมรเทพ สาน้อย
 body {
-  font-family: 'Prompt', sans-serif;
-  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  animation: fadeIn 1s ease-in-out;
-  overflow: hidden;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .login-container {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  width: 90%;
-  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
   text-align: center;
-  animation: slideIn 0.8s ease-in-out;
-}
-
-@keyframes slideIn {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
 }
 
 h2 {
   margin-bottom: 20px;
-  color: #333;
 }
 
-.input-group {
-  display: flex;
-  align-items: center;
-  background: #f4f4f4;
+input {
+  width: 90%;
   padding: 10px;
-  border-radius: 6px;
   margin: 10px 0;
-}
-
-.input-group i {
-  margin-right: 10px;
-  color: #888;
-}
-
-.input-group input {
-  border: none;
-  background: transparent;
-  width: 100%;
-  outline: none;
-  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
   width: 100%;
-  padding: 12px;
-  background: #28a745;
+  padding: 10px;
+  background-color: #28a745;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  font-size: 16px;
-  font-weight: bold;
 }
 
 button:hover {
-  background: #218838;
-  transform: scale(1.05);
+  background-color: #218838;
 }
 
 #error-message {
   color: red;
   margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-#error-message.show {
-  opacity: 1;
-}
-
-a {
-  display: inline-block;
-  margin-top: 15px;
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #0056b3;
-}
-
-@media (max-width: 480px) {
-  .login-container {
-    padding: 20px;
-    width: 95%;
-  }
-
-  input, button {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .login-container {
-    max-width: 450px;
-  }
-}
-
-html, body {
-  touch-action: manipulation;
 }
