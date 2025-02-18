@@ -3,79 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Google site โครงงานของแผนกวิชาเทคโนโลยีสารสนเทศ</title>
+    <title>Google Site โครงงาน IT วิทยาลัยเทคนิคสิงห์บุรี</title>
     <style>
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #d9e7d8, #b5c5b7);
+            background: linear-gradient(135deg, #eef2f3, #d9e7d8);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            overflow: hidden; /* ป้องกันการเลื่อน */
+            overflow: hidden; 
             position: relative;
-            touch-action: none; /* ปิด gesture เลื่อน */
+            touch-action: none;
         }
 
-        /* ลวดลายพื้นหลังแบบวงกลม */
+        /* ลวดลายพื้นหลังแบบ Gradient */
         .background-decor {
             position: absolute;
-            top: 20%;
-            left: 10%;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.1);
+            top: 15%;
+            left: 5%;
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            filter: blur(60px);
+            filter: blur(80px);
         }
 
         .background-decor2 {
             position: absolute;
-            bottom: 15%;
-            right: 15%;
-            width: 250px;
-            height: 250px;
-            background: rgba(255, 255, 255, 0.1);
+            bottom: 10%;
+            right: 10%;
+            width: 280px;
+            height: 280px;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            filter: blur(50px);
+            filter: blur(70px);
         }
 
         .container {
             display: flex;
             flex-direction: row;
             background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             overflow: hidden;
             max-width: 900px;
             z-index: 1;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
         }
 
         .logo-section {
-            background: #d9e7d8;
-            padding: 20px;
+            background: #b5c5b7;
+            padding: 40px;
             text-align: center;
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
         }
 
         .logo {
-            width: 100px;
+            width: 120px;
             margin-bottom: 20px;
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
         }
 
         h1 {
             font-size: 1.8rem;
             margin: 10px 0;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            color: #666;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .form-section {
-            padding: 30px;
+            padding: 40px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -86,22 +93,26 @@
 
         .btn {
             width: 100%;
-            max-width: 200px;
+            max-width: 220px;
             margin: 10px 0;
-            padding: 10px;
+            padding: 12px;
             font-size: 1rem;
-            background: #6c757d;
+            font-weight: bold;
+            background: linear-gradient(135deg, #6c757d, #495057);
             color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
             text-align: center;
             text-decoration: none;
-            transition: background 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
-            background: #5a6268;
+            background: linear-gradient(135deg, #495057, #343a40);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
 
         .social-buttons {
@@ -111,26 +122,29 @@
         }
 
         .social-btn {
-            padding: 10px 20px;
+            padding: 12px 24px;
             font-size: 0.9rem;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
-            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.1);
         }
 
         .social-btn.google {
             background: #db4437;
-            color: #fff;
         }
 
         .social-btn.facebook {
             background: #4267B2;
-            color: #fff;
         }
-    </style>
-    <script>
-        // ป้องกันการเลื่อนด้วย JavaScript
+
+        /* ป้องกันการเลื่อน */
         document.addEventListener("wheel", function(event) {
             event.preventDefault();
         }, { passive: false });
@@ -138,7 +152,7 @@
         document.addEventListener("touchmove", function(event) {
             event.preventDefault();
         }, { passive: false });
-    </script>
+    </style>
 </head>
 <body>
     <!-- ลวดลายพื้นหลัง -->
@@ -149,13 +163,17 @@
         <!-- Section โลโก้ -->
         <div class="logo-section">
             <img src="newlogoit-Photoroom.png" alt="โลโก้แผนก" class="logo">
-            <h1>Google site โครงงานของแผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคสิงห์บุรี</h1>
+            <h1>Google Site โครงงาน IT วิทยาลัยเทคนิคสิงห์บุรี</h1>
         </div>
 
         <!-- Section ฟอร์ม -->
         <div class="form-section">
             <a href="login.html" class="btn">เข้าสู่ระบบ</a>
             <a href="register.html" class="btn">ลงทะเบียน</a>
+            <div class="social-buttons">
+                <button class="social-btn google">เข้าสู่ระบบด้วย Google</button>
+                <button class="social-btn facebook">เข้าสู่ระบบด้วย Facebook</button>
+            </div>
         </div>
     </div>
 </body>
