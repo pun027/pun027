@@ -20,7 +20,6 @@ const db = getFirestore(app);
 document.getElementById("register-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
   const confirmPassword = document.getElementById("confirm-password").value.trim();
