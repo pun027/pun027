@@ -24,7 +24,6 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
   const password = document.getElementById("password").value.trim();
   const confirmPassword = document.getElementById("confirm-password").value.trim();
   const errorMessage = document.getElementById("error-message");
-  errorMessage.textContent = ""; // ล้างข้อความเก่าก่อน
 
   // ตรวจสอบว่ากรอกข้อมูลครบหรือไม่
   if (!email || !password || !confirmPassword) {
