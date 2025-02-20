@@ -27,7 +27,7 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
   errorMessage.textContent = ""; // ล้างข้อความเก่าก่อน
 
   // ตรวจสอบว่ากรอกข้อมูลครบหรือไม่
-  if (!name || !email || !password || !confirmPassword) {
+  if (!email || !password || !confirmPassword) {
     errorMessage.textContent = "กรุณากรอกข้อมูลให้ครบถ้วน!";
     return;
   }
@@ -45,7 +45,6 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
     // บันทึกข้อมูลผู้ใช้ใน Firestore
     await addDoc(collection(db, "users"), {
       uid: user.uid,
-      name: name,
       email: email,
       createdAt: new Date(),
     });
